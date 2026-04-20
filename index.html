@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Top 10 Interactivo</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: linear-gradient(#0a1f44, #000);
+    color: white;
+    text-align: center;
+}
+
+/* Animación */
+@keyframes aparecer {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+h1 {
+    animation: aparecer 1s;
+}
+
+/* Tarjetas */
+.equipo {
+    margin: 15px auto;
+    padding: 15px;
+    width: 80%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.equipo:hover {
+    transform: scale(1.05);
+    background: rgba(255,255,255,0.1);
+}
+
+/* Info oculta */
+.info {
+    display: none;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Botón */
+.boton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.boton:hover {
+    background: yellow;
+    color: black;
+}
+</style>
+
+<script>
+function toggleInfo(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Top 10 Equipos Argentinos ⚽ (Click para ver info)</h1>
+
+<div class="equipo" style="color: yellow;" onclick="toggleInfo('boca')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/41/CABJ70.png" width="40">
+<b>1. Boca Juniors</b>
+<div class="info" id="boca">
+🏆 Libertadores (6), Intercontinental (3), Liga (35)<br>
+⭐ Riquelme
+</div>
+</div>
+
+<div class="equipo" style="color: red;" onclick="toggleInfo('river')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_River_Plate.png" width="40">
+<b>2. River Plate</b>
+<div class="info" id="river">
+🏆 Libertadores (4), Intercontinental (1), Liga (38)<br>
+⭐ Francescoli
+</div>
+</div>
+
+<div class="equipo" style="color: red;" onclick="toggleInfo('independiente')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Escudo_del_Club_Atl%C3%A9tico_Independiente.svg" width="40">
+<b>3. Independiente</b>
+<div class="info" id="independiente">
+🏆 Libertadores (7), Intercontinental (2), Liga (16)<br>
+⭐ Bochini
+</div>
+</div>
+
+<div class="equipo" style="color: lightblue;" onclick="toggleInfo('racing')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Escudo_de_Racing_Club.svg" width="40">
+<b>4. Racing Club</b>
+<div class="info" id="racing">
+🏆 Libertadores (1), Intercontinental (1), Liga (18)<br>
+⭐ Milito
+</div>
+</div>
+
+<div class="equipo" style="color: red;" onclick="toggleInfo('sanlorenzo')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/San_Lorenzo_de_Almagro.png" width="40">
+<b>5. San Lorenzo</b>
+<div class="info" id="sanlorenzo">
+🏆 Libertadores (1), Liga (15)<br>
+⭐ Romagnoli
+</div>
+</div>
+
+<div class="equipo" style="color: white;" onclick="toggleInfo('estudiantes')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Escudo_de_Estudiantes_de_La_Plata.svg" width="40">
+<b>6. Estudiantes</b>
+<div class="info" id="estudiantes">
+🏆 Libertadores (4), Intercontinental (1)<br>
+⭐ Verón
+</div>
+</div>
+
+<div class="equipo" style="color: lightblue;" onclick="toggleInfo('velez')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Escudo_Velez_Sarsfield.svg" width="40">
+<b>7. Vélez</b>
+<div class="info" id="velez">
+🏆 Libertadores (1), Intercontinental (1)<br>
+⭐ Bianchi
+</div>
+</div>
+
+<div class="equipo" style="color: red;" onclick="toggleInfo('newells')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Newells_old_boys_escudo.png" width="40">
+<b>8. Newell's</b>
+<div class="info" id="newells">
+🏆 Liga (6)<br>
+⭐ Batistuta
+</div>
+</div>
+
+<div class="equipo" style="color: yellow;" onclick="toggleInfo('central')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Escudo_del_Club_Atl%C3%A9tico_Rosario_Central.svg" width="40">
+<b>9. Rosario Central</b>
+<div class="info" id="central">
+🏆 Liga (4)<br>
+⭐ Kempes
+</div>
+</div>
+
+<div class="equipo" style="color: white;" onclick="toggleInfo('huracan')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/CAHuracan.png" width="40">
+<b>10. Huracán</b>
+<div class="info" id="huracan">
+🏆 Liga (1)<br>
+⭐ Houseman
+</div>
+</div>
+
+<a href="pagina2.html" class="boton">Ir a la segunda página</a>
+
+</body>
+</html>
